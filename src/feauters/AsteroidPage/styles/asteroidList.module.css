@@ -1,0 +1,19 @@
+.listContainer {
+  padding: 0.5rem;
+}
+
+.listWrapper {
+  border-radius: 12px;
+  border: 1px solid rgb(129, 129, 129);
+  color: white;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.active {
+  border: 1px solid #38bdf8;
+}

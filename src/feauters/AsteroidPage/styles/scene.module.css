@@ -1,0 +1,11 @@
+.sceneWrapper {
+  width: 100%;
+  height: 100%;
+  min-width: 0; /* ОЧЕНЬ важно для flex */
+}
+
+.sceneWrapper canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
