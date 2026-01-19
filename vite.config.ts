@@ -13,5 +13,5 @@ export default defineConfig({
     tailwindcss(),
     react(),
   ],
-  base: "/nasa-api",
+  base: "/nasa-api/",
 });
