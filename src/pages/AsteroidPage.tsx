@@ -4,7 +4,7 @@ import AsteroidChart from "../feauters/AsteroidPage/Components/AsteroidChart";
 
 function AsteroidPage() {
   return (
-    <div className="flex justify-between gap-3 p-4">
+    <div className="flex justify-between gap-3 p-4 mt-10">
       <div className="flex flex-col">
         <AsteriodInfo />
         <AsteroidChart />
@@ -15,4 +15,3 @@ function AsteroidPage() {
 }
 
 export default AsteroidPage;
-//home

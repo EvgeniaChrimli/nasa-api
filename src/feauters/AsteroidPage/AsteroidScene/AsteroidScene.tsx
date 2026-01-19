@@ -21,9 +21,8 @@ export function AsteroidScene({
 }: Props) {
   const getAsteroidPosition = (
     moidKm: number,
-    inclinationDeg: number
+    inclinationDeg: number,
   ): [number, number, number] => {
-    // нормализуем расстояние (не физически точно, а наглядно)
     const distance = THREE.MathUtils.clamp(moidKm / 5_000_000, 2, 10);
 
     const inclinationRad = THREE.MathUtils.degToRad(inclinationDeg);
@@ -40,8 +39,6 @@ export function AsteroidScene({
     const EARTH_VISUAL_SCALE = 1.1;
 
     const ratio = diameterKm / EARTH_DIAMETER_KM;
-
-    // логарифм сглаживает огромные скачки
     const visualScale = Math.log10(ratio * 1000 + 1) * EARTH_VISUAL_SCALE;
 
     return THREE.MathUtils.clamp(visualScale, 0.05, EARTH_VISUAL_SCALE * 0.5);

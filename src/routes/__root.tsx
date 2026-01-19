@@ -1,5 +1,4 @@
 import { Outlet, createRootRoute } from "@tanstack/react-router";
-import Header from "../shared/UI/Header";
 
 export const Route = createRootRoute({
   component: RootLayout,
@@ -10,7 +9,6 @@ export const Route = createRootRoute({
 function RootLayout() {
   return (
     <>
-      <Header />
       <Outlet />
     </>
   );

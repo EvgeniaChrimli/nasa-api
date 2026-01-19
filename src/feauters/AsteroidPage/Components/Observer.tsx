@@ -32,7 +32,7 @@ const Observer = ({
         root: root.current,
         threshold: 0.1,
         rootMargin: rootMargin,
-      }
+      },
     );
 
     const currentRef = observerRef.current;
@@ -51,18 +51,7 @@ const Observer = ({
 
   return (
     <>
-      <div
-        ref={observerRef}
-        // sx={{
-        //   display: "flex",
-        //   justifyContent: "center",
-        //   alignItems: "center",
-        //   mb: 4,
-        //   width: "100%",
-        //   minHeight: isFetchingNextPage ? "20px" : "1px",
-        //   transition: "all 0.3s ease",
-        // }}
-      >
+      <div ref={observerRef}>
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{
@@ -79,16 +68,7 @@ const Observer = ({
           animate={{ opacity: !isFetching && !hasNextPage ? 1 : 0 }}
           transition={{ duration: 0.5 }}
         >
-          {!hasNextPage && (
-            <div
-            //   sx={{
-            //     color: theme.palette.primary.light,
-            //     fontSize: "clamp(1rem, 0.9708rem + 0.1299vw, 1.125rem)",
-            //   }}
-            >
-              no more data
-            </div>
-          )}
+          {!hasNextPage && <div>no more data</div>}
         </motion.div>
       </div>
     </>
